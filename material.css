@@ -1,0 +1,144 @@
+.material {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.material .card {
+    width: 600px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 20px;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: relative;
+    transition: box-shadow 0.3s;
+}
+
+.material .card:hover {
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.material .card::after {
+    content: 'VS';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #6200ea;
+    padding: 10px 15px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 1;
+}
+
+.material .card h2 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+    z-index: 2;
+}
+
+.material .card .slogan {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    font-style: italic;
+    color: #666;
+    z-index: 2;
+}
+
+.material .card .description {
+    position: absolute;
+    top: 90px;
+    left: 20px;
+    right: 20px;
+    font-size: 16px;
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+    z-index: 2;
+}
+
+.material .edition {
+    flex: 1;
+    margin: 0 10px;
+    padding-top: 200px;
+}
+
+.material .card img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.material .card img:hover {
+    transform: scale(1.02);
+}
+
+.material .card h3 {
+    font-size: 20px;
+    color: #6200ea;
+    margin: 15px 0 10px;
+}
+
+.material .card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.material .card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.material .card a:hover h3 {
+    text-decoration: underline;
+    color: #7c4dff;
+}
+
+.material .buy-button {
+    background-color: #6200ea;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+.material .buy-button:hover {
+    background-color: #7c4dff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transform: translateY(-2px);
+}
+
+.material .buy-button:active {
+    background-color: #4a148c;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    transform: translateY(0);
+}

@@ -1,0 +1,136 @@
+.flat {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flat .card {
+    width: 600px;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: relative;
+}
+
+.flat .card::after {
+    content: 'VS';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4CAF50;
+    padding: 8px 12px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.flat .card h2 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    text-shadow: none;
+    margin: 0;
+    z-index: 2;
+}
+
+.flat .card .slogan {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-style: italic;
+    color: #777;
+    z-index: 2;
+}
+
+.flat .card .description {
+    position: absolute;
+    top: 90px;
+    left: 20px;
+    right: 20px;
+    font-size: 14px;
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+    z-index: 2;
+}
+
+.flat .edition {
+    flex: 1;
+    margin: 0 10px;
+    padding-top: 180px;
+}
+
+.flat .card img {
+    width: 100%;
+    border-radius: 8px;
+    transition: opacity 0.3s;
+}
+
+.flat .card img:hover {
+    opacity: 0.8;
+}
+
+.flat .card h3 {
+    font-size: 18px;
+    color: #4CAF50;
+    margin: 15px 0 10px;
+}
+
+.flat .card p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.flat .card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.flat .card a:hover h3 {
+    text-decoration: underline;
+    color: #388e3c;
+}
+
+.flat .buy-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.flat .buy-button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.flat .buy-button:active {
+    background-color: #3e8e41;
+    transform: translateY(0);
+}
