@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.card {
+    width: 300px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px #b0b0b0, -10px -10px 20px #ffffff;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #888;
+}
+
+.card h2 {
+    color: #333;
+    margin: 10px 0;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+}
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card a:hover h2 {
+    text-decoration: underline;
+}
+
+.buy-button {
+    background: linear-gradient(145deg, #4CAF50, #45a049);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #888;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: all 0.2s;
+}
+
+.buy-button:hover {
+    background: linear-gradient(145deg, #45a049, #3e8e41);
+    box-shadow: 3px 3px 6px #888;
+}
+
+.buy-button:active {
+    box-shadow: inset 2px 2px 5px #666;
+    transform: translateY(2px);
+}
