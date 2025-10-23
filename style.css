@@ -1,0 +1,428 @@
+/* Перенесём body-стили в обёртку */
+.skeuo {
+    font-family: 'Georgia', serif; /* Более элегантный шрифт */
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Префиксируем остальные селекторы */
+.skeuo .card {
+    width: 600px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border-radius: 20px;
+    box-shadow: 15px 15px 30px #b0b0b0, -15px -15px 30px #ffffff;
+    margin: 20px;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: relative;
+}
+
+.skeuo .card::after {
+    content: 'VS';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    background: linear-gradient(145deg, #ffeb3b, #ffc107);
+    padding: 10px 15px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px #888;
+    z-index: 1;
+}
+
+.skeuo .card h2 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+    font-weight: bold;
+    background: linear-gradient(145deg, #333, #666);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin: 0;
+    z-index: 2;
+}
+
+.skeuo .card .slogan {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    font-style: italic;
+    color: #777;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    z-index: 2;
+}
+
+.skeuo .card .description {
+    position: absolute;
+    top: 90px;
+    left: 20px;
+    right: 20px;
+    font-size: 16px;
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.skeuo .edition {
+    flex: 1;
+    margin: 0 10px;
+    padding-top: 200px;
+}
+
+.skeuo .card img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 8px 8px 16px #888;
+    transition: transform 0.3s;
+}
+
+.skeuo .card img:hover {
+    transform: scale(1.05);
+}
+
+.skeuo .card h3 {
+    font-size: 20px;
+    color: #4CAF50;
+    margin: 15px 0 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.skeuo .card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.skeuo .card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.skeuo .card a:hover h3 {
+    text-decoration: underline;
+    color: #388e3c;
+}
+
+.skeuo .buy-button {
+    background: linear-gradient(145deg, #4CAF50, #45a049);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px #888;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.skeuo .buy-button:hover {
+    background: linear-gradient(145deg, #45a049, #3e8e41);
+    box-shadow: 3px 3px 6px #888;
+    transform: translateY(-2px);
+}
+
+.skeuo .buy-button:active {
+    box-shadow: inset 2px 2px 5px #666;
+    transform: translateY(2px);
+}
+.flat {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flat .card {
+    width: 600px;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: relative;
+}
+
+.flat .card::after {
+    content: 'VS';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4CAF50;
+    padding: 8px 12px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.flat .card h2 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    text-shadow: none;
+    margin: 0;
+    z-index: 2;
+}
+
+.flat .card .slogan {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-style: italic;
+    color: #777;
+    z-index: 2;
+}
+
+.flat .card .description {
+    position: absolute;
+    top: 90px;
+    left: 20px;
+    right: 20px;
+    font-size: 14px;
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+    z-index: 2;
+}
+
+.flat .edition {
+    flex: 1;
+    margin: 0 10px;
+    padding-top: 180px;
+}
+
+.flat .card img {
+    width: 100%;
+    border-radius: 8px;
+    transition: opacity 0.3s;
+}
+
+.flat .card img:hover {
+    opacity: 0.8;
+}
+
+.flat .card h3 {
+    font-size: 18px;
+    color: #4CAF50;
+    margin: 15px 0 10px;
+}
+
+.flat .card p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.flat .card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.flat .card a:hover h3 {
+    text-decoration: underline;
+    color: #388e3c;
+}
+
+.flat .buy-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.flat .buy-button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.flat .buy-button:active {
+    background-color: #3e8e41;
+    transform: translateY(0);
+}
+
+.material {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.material .card {
+    width: 600px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 20px;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: relative;
+    transition: box-shadow 0.3s;
+}
+
+.material .card:hover {
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.material .card::after {
+    content: 'VS';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #6200ea;
+    padding: 10px 15px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 1;
+}
+
+.material .card h2 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+    z-index: 2;
+}
+
+.material .card .slogan {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    font-style: italic;
+    color: #666;
+    z-index: 2;
+}
+
+.material .card .description {
+    position: absolute;
+    top: 90px;
+    left: 20px;
+    right: 20px;
+    font-size: 16px;
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+    z-index: 2;
+}
+
+.material .edition {
+    flex: 1;
+    margin: 0 10px;
+    padding-top: 200px;
+}
+
+.material .card img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.material .card img:hover {
+    transform: scale(1.02);
+}
+
+.material .card h3 {
+    font-size: 20px;
+    color: #6200ea;
+    margin: 15px 0 10px;
+}
+
+.material .card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.material .card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.material .card a:hover h3 {
+    text-decoration: underline;
+    color: #7c4dff;
+}
+
+.material .buy-button {
+    background-color: #6200ea;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+.material .buy-button:hover {
+    background-color: #7c4dff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transform: translateY(-2px);
+}
+
+.material .buy-button:active {
+    background-color: #4a148c;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    transform: translateY(0);
+}
